@@ -1,20 +1,26 @@
 .reviews {
   max-width: 1057px;
   margin-top: 65px;
+  position: relative;
 
   &__title {
     text-align: center;
   }
 
   &__list {
-    margin-top: 65px;
+    overflow: hidden;
+
+    .swiper-wrapper {
+      height: auto;
+      margin: 65px 0 56px;
+    }
   }
 
   &__item {
     width: 303px;
-    margin-right: 50px;
+    margin: 0 25px;
     background-color: @white;
-    box-shadow: 5px 5px 30px rgba(83, 81, 79, 0.1);
+    box-shadow: 5px 5px 15px rgba(83, 81, 79, 0.1);
   }
 
   &__link {
@@ -25,11 +31,34 @@
     color: @white;
     width: max-content;
     padding: 15px 30px;
-    margin: 55px auto 0;
+    margin: 0 auto;
     background: @orange;
     box-shadow: -5px 5px 20px rgba(255, 130, 25, 0.4);
     border-radius: 20px;
     display: block;
+  }
+
+  &__control {
+    width: 33px;
+    height: 33px;
+    background: @orange url("../img/chevron_white_down.svg") no-repeat center;
+    background-size: 20px 13px;
+    border-radius: 50%;
+    transform-origin: center;
+    position: absolute;
+    top: 50%;
+
+    &--prev {
+      left: -48px;
+      transform: translateY(-50%) rotate(90deg);
+      background-position: top 11px center;
+    }
+
+    &--next {
+      right: -48px;
+      transform: translateY(-50%) rotate(-90deg);
+      background-position: top 12px center;
+    }
   }
 }
 

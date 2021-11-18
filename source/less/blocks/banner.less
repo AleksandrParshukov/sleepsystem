@@ -1,11 +1,9 @@
 .banner {
-  width: 1028px;
-  height: 419px;
+  max-width: 1028px;
   margin: 0 auto;
   background-size: 100%;
   border-radius: 0px 0px 18px 18px;
   position: relative;
-  overflow: hidden;
 
   &__button{
     font-size: 16px;
@@ -19,15 +17,13 @@
   }
 
   &__image {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
+    width: 100%;
+    height: 100%;
 
     >img {
       width: 100%;
       height: 100%;
+      border-radius: 0px 0px 18px 18px;
     }
   }
 }
@@ -42,9 +38,19 @@
 @media (max-width: 576px) {
   .banner {
     width: 375px;
-    height: 260px;
+    height: 335px;
     border-radius: 0;
     overflow: visible;
+
+    &--index {
+      height: 260px;
+    }
+
+    &__image {  
+      >img {
+        border-radius: 0;
+      }
+    }
 
     &__button{
       position: absolute;

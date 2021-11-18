@@ -25,7 +25,7 @@ const location_swiper = new Swiper ('.location__swiper', {
 })
 
 const reviews_swiper = new Swiper ('.reviews__list', {
-  loop: false,
+  loop: true,
   slidesPerView: "auto",
   navigation: {
     nextEl: '.reviews__control--next',
@@ -74,7 +74,7 @@ $.each($filter__dropdown, function() {
 
 
 
-/* ********** Footer Menu ********** */
+/* ********** Header Menu ********** */
 
 const $header__open_menu = $('.header__open_menu'),
       $header__close_menu = $('.header__close_menu'),
@@ -115,5 +115,24 @@ $.each($footer_menu, function() {
     evt.preventDefault();
 
     $menu.toggleClass('open');
+  })
+})
+
+
+
+
+
+/* ********** Materials ********** */
+
+const $material_page__dropdown = $('.material_page__dropdown');
+
+$.each($material_page__dropdown, function() {
+  const $dropdown = $(this);
+        $caption = $dropdown.find('.material_page__caption');
+
+  $caption.on('click', function(evt) {
+    evt.preventDefault();
+
+    $dropdown.toggleClass('open');
   })
 })

@@ -2,8 +2,21 @@
   max-width: 1028px;
   margin: 0 auto;
 
+  &__title {
+    font-weight: bold;
+    font-size: 48px;
+    line-height: 59px;
+    letter-spacing: 0.02em;
+    color: @white;
+    position: absolute;
+    top: 163px;
+    left: 17px;
+    z-index: 1;
+  }
+
   &__row {
     position: relative;
+    margin: 0 0 90px;
 
     p {
       font-weight: normal;
@@ -27,6 +40,205 @@
     >img {
       width: 100%;
       height: 100%;
+    }
+  }
+
+  &__hands {
+    position: absolute;
+    top: 84px;
+    right: -46px;
+  }
+
+  &__tile {
+    width: 100%;
+    margin-top: 108px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__tile_item {
+    position: relative;
+
+    &:nth-child(2) {
+      margin: -20px 0 47px 50%;
+    }
+
+    &:nth-child(4) {
+      margin: 0 0 0 50%;
+    }
+  }
+
+  &__tile_num {
+    font-weight: bold;
+    font-size: 300px;
+    line-height: 366px;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+    color: @orange;
+    opacity: 0.31;
+    position: absolute;
+
+    &:nth-child(1) {
+      top: -159px;
+      left: -55px;
+    }
+
+    &:nth-child(2) {
+      top: -144px;
+      left: -63px;
+    }
+
+    &:nth-child(3) {
+      top: -182px;
+      left: -55px;
+    }
+
+    &:nth-child(4) {
+      top: -179px;
+      left: -3px;
+    }
+  }
+
+  &__contacts {
+    padding: 53px 0;
+    margin: 110px -100% 0;
+    box-shadow: 0 -6px 26px -16px rgba(0,0,0,.08);
+
+    >p:first-child {
+      font-size: 40px;
+      line-height: 49px;
+      letter-spacing: 0.02em;
+      color: #00A64C;
+      width: max-content;
+      margin: 0 108px 0 auto;
+    }
+
+    >p:last-child {
+      width: max-content;
+      margin: 0 auto 0 0;
+
+      >a {
+        font-size: 40px;
+        line-height: 49px;
+        color: @orange;
+      }
+      
+      >a:last-child {
+        letter-spacing: 0.04em;
+      }
+
+
+    }
+  }
+
+  &__reviews {
+    margin: 46px 0 150px;
+    
+    .reviews__list {
+      .swiper-wrapper {
+        margin-top: 56px;
+      }
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  .partnership {
+    max-width: 1028px;
+    margin: 0 auto;
+
+    .banner {
+      padding-left: -10px;
+    }
+
+    >div:not(div:first-child) {
+      padding: 0 10px;
+    }
+
+    &__title {
+      font-size: 30px;
+      line-height: 37px;
+      top: 216px;
+      left: 11px;
+    }
+
+    &__row {
+      position: relative;
+      margin: 0;
+
+      p {
+        font-size: 16px;
+        line-height: 20px;
+      }
+
+      >p {
+        margin-top: 28px;
+      }
+    }
+
+    &__logos {
+      width: 471px;
+      height: 387px;
+      position: static;
+    }
+
+    &__hands {
+      width: 114px;
+      height: 81px;
+      position: static;
+      margin: 9px 0 0 auto;
+    }
+
+    &__tile {
+      width: 100%;
+      padding-left: 32px;
+      margin-top: 30px;
+      display: flex;
+      flex-direction: column;
+    }
+
+    &__tile_item {
+      &:nth-child(2) {
+        margin: 117px 0 107px;
+      }
+
+      &:nth-child(4) {
+        margin: 140px 0 81px;
+      }
+    }
+
+    &__contacts {
+      padding: 40px 0 56px !important;
+      margin: 0;
+      flex-direction: column;
+      align-items: center;
+
+      >p:first-child {
+        font-size: 26px;
+        line-height: 32px;
+        text-align: center;
+        width: 312px;
+        margin: 0 0 20px;
+      }
+
+      >p:last-child {
+        margin: 0;
+
+        >a {
+          font-size: 26px;
+          line-height: 32px;
+        }
+      }
+    }
+
+    &__reviews {
+      margin: 10px 0 50px;
+      
+      .reviews__list {
+        .swiper-wrapper {
+          margin-top: 10px;
+        }
+      }
     }
   }
 }

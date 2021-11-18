@@ -25,7 +25,7 @@ const location_swiper = new Swiper ('.location__swiper', {
 })
 
 const reviews_swiper = new Swiper ('.reviews__list', {
-  loop: false,
+  loop: true,
   slidesPerView: "auto",
   navigation: {
     nextEl: '.reviews__control--next',

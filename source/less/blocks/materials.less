@@ -1,0 +1,149 @@
+.materials {
+  &__row {
+    border-bottom: 1px solid #000000;
+
+    &:last-child {
+      margin-bottom: 125px;
+    }
+  }
+
+  &__title {
+    margin: 37px 0 25px;
+  }
+
+  &__brand_logo {
+    margin: 21px 0;
+  }
+
+  &__list {
+    width: 100%;
+    margin-bottom: 75px;
+    display: grid;
+    grid-template-columns: repeat(3, 312px);
+    gap: 60px 45px;
+  }
+
+  &__item {
+    width: 100%;
+    height: 241px;
+    display: flex;
+    justify-content: center;
+    position: relative;
+  }
+
+  &__image {
+    width: auto;
+    height: 100%;
+  }
+
+  &__brand_logo {
+    &--tempur {
+      width: 247px;
+      height: 108px;
+    }
+
+    &--belbadding {
+      width: 270px;
+      height: 76px;
+    }
+
+    &--mrmatress {
+      width: 93px;
+      height: 107px;
+    }
+
+    &--brn {
+      width: 156px;
+      height: 107px;
+    }
+
+    &--froli {
+      width: 206px;
+      height: 80px;
+    }
+  }
+
+  &__link {
+    font-size: 20px;
+    line-height: 24px;
+    letter-spacing: 0.01em;
+    color: @orange;
+    padding: 15px 30px;
+    background: @white;
+    border: 2px solid @orange;
+    box-sizing: border-box;
+    border-radius: 20px;
+    display: block;
+    position: absolute;
+    bottom: -19px;
+    left: -16px;
+  }
+}
+
+@media (max-width: 576px) {
+  .materials {
+    &__row {
+      &:last-child {
+        margin-bottom: 110px;
+      }
+    }
+  
+    &__title {
+      margin: 20px 0 28px;
+    }
+  
+    &__brand_logo {
+      margin: 18px 0;
+    }
+  
+    &__list {
+      width: 100%;
+      padding: 0 10px;
+      margin: 0 auto 35px;
+      grid-template-columns: repeat(2, 147px);
+      gap: 32px 40px;
+    }
+  
+    &__item {
+      width: 100%;
+      height: 117px;
+    }
+  
+    &__brand_logo {
+      &--tempur {
+        width: 213px;
+        height: 71px;
+      }
+  
+      &--belbadding {
+        width: 179px;
+        height: 58px;
+      }
+  
+      &--mrmatress {
+        width: 72px;
+        height: 83px;
+      }
+  
+      &--brn {
+        width: 107px;
+        height: 73px;
+      }
+  
+      &--froli {
+        width: 131px;
+        height: 51px;
+      }
+    }
+  
+    &__link {
+      font-size: 14px;
+      line-height: 17px;
+      width: max-content;
+      padding: 10px 4px;
+      background: @white;
+      bottom: -7px;
+      left: -9px;
+    }
+  }
+}

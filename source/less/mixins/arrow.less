@@ -1,4 +1,5 @@
 .arrow-right(@width, @color, @right) {
+  position: relative;
   &::before,
   &::after {
     content: "";
@@ -25,6 +26,7 @@
 }
 
 .arrow-left(@width, @color, @left) {
+  position: relative;
   &::before,
   &::after {
     content: "";
@@ -41,8 +43,8 @@
   }
 
   &::after {
-    width: 7px;
-    height: 7px;
+    width: 21px;
+    height: 19px;
     background-color: transparent;
     border-bottom: 2px solid @color;
     border-left: 2px solid @color;
