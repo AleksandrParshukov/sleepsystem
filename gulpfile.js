@@ -110,9 +110,9 @@ const watcher = () => {
   gulp.watch("source/*.html", gulp.series(html, reload));
 }
 
-// docs
+// build
 
-const docs = gulp.series(
+const build = gulp.series(
   clean,
   gulp.parallel(
     styles,
@@ -121,12 +121,12 @@ const docs = gulp.series(
     copy
   ));
 
-exports.docs = docs;
+exports.build = build;
 
 // Default
 
 exports.default = gulp.series(
-  docs,
+  build,
   gulp.series(
     server,
     watcher
