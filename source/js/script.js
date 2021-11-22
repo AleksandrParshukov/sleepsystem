@@ -33,6 +33,15 @@ const reviews_swiper = new Swiper ('.reviews__list', {
   },
 })
 
+const certificate__promotions_swiper = new Swiper ('.certificate__promotions .promotions__list', {
+  loop: true,
+  slidesPerView: "auto",
+  navigation: {
+    nextEl: '.reviews__control--next',
+    prevEl: '.reviews__control--prev',
+  },
+})
+
 const recommendations_swiper = new Swiper ('.recommendations__list', {
   loop: true,
   slidesPerView: "auto",

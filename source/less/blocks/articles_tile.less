@@ -107,7 +107,10 @@
 @media (max-width: 1200px) {
   .articles_tile {
     max-width: 860px;
-    margin-top: 60px;
+
+    &__title {
+      margin-top: 60px;
+    }
 
     &__list {
       margin-top: 70px;
@@ -184,9 +187,13 @@
 @media (max-width: 576px) {
   .articles_tile {
     max-width: 355px;
-    margin-top: 32px;
+
+    &__title {
+      margin-top: 32px;
+    }
   
     &__list {
+      width: 100%;
       margin-top: 32px;
       display: flex;
       flex-direction: column;

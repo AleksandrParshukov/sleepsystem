@@ -56,7 +56,7 @@
   &__text {
     font-weight: normal;
     font-size: 18px;
-    line-height: 38px;
+    line-height: 22px;
     letter-spacing: 0.01em;
     margin: 0 0 35px 88px;
 
@@ -66,7 +66,25 @@
       line-height: 24px;
       letter-spacing: 0.01em;
       color: @orange;
-      margin-bottom: 20px;
+      margin: 0 0 20px 88px;
+    }
+  }
+
+  &__list {
+    margin: 0 0 35px 88px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__item {
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 22px;
+    letter-spacing: 0.01em;
+    margin-bottom: 13px;
+
+    &:last-child {
+      margin: 0;
     }
   }
 
@@ -77,7 +95,7 @@
     color: @orange;
     width: max-content;
     padding: 0 0 0 88px;
-    margin: 0 0 0 88px;
+    margin: 45px 0 0 88px;
 
     .arrow-left(auto, @orange, 0);
 
@@ -138,7 +156,7 @@
       font-size: 16px;
       line-height: 20px;
       max-width: 100%;
-      margin: 0 0 24px 0;
+      margin: 0 0 25px 0;
     }
 
     &__caption {
@@ -156,13 +174,24 @@
         margin-bottom: 15px;
       }
     }
+
+    &__list {
+      margin: 0 0 20px 0;
+      display: flex;
+      flex-direction: column;
+    }
+  
+    &__item {
+      font-size: 16px;
+      line-height: 20px;
+    }
   
     &__back_link {
       font-size: 18px;
       line-height: 22px;
       width: max-content;
       padding: 0 56px 0 34px;
-      margin: 29px 0 0;
+      margin: 30px 0 0;
     }
   }
 }

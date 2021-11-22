@@ -21,6 +21,7 @@
   }
 
   &__benefits {
+    width: 100%;
     margin: 0 0 70px;
     justify-content: space-between;
   }
@@ -43,6 +44,7 @@
   }
 
   &__form {
+    width: 100%;
     margin: 0 auto 80px 88px;
     align-items: flex-end;
     justify-content: space-between;
@@ -125,16 +127,24 @@
   }
 
   &__promotions {
-    margin: 77px 0 83px;
+    position: relative;
+
+    .swiper-wrapper {
+      max-height: 400px;
+      margin: 77px 0 83px;
+      align-items: stretch;
+    }
+  }
+
+  .promotions__list {
+    overflow: hidden;
   }
 
   &__promotion {
     width: 250px;
+    height: 100%;
     margin: 0 10px;
-
-    .review__image {
-      margin: 0 auto;
-    }
+    align-content: flex-start;
   }
 
   &__name {
@@ -190,11 +200,24 @@
         line-height: 20px;
       }
     }
+    
+    &__caption--top {
+      margin: 20px 0;
+    }
   
     &__benefits {
-      margin: 22px 0 50px;
+      margin: 0 0 50px;
       flex-direction: column;
       align-items: center;
+    }
+  
+    &__benefit {
+      &:nth-child(1) .certificate__benefits_img {
+        margin: 0;
+      }
+      &:nth-child(3) .certificate__benefits_img{
+        margin: 55px 0 14px;
+      }
     }
 
     &__form {

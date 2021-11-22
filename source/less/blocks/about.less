@@ -12,7 +12,7 @@
   }
 
   &__row {
-    p:not(.about__stat_number) {
+    >p:not(.about__stat_number) {
       font-weight: normal;
       font-size: 18px;
       line-height: 22px;
@@ -86,8 +86,12 @@
     background-position-y: top 640px;
     position: relative;
 
-    p {
+    .about__row >p {
       max-width: 493px;
+
+      &:nth-child(2) {
+        margin-bottom: 201px;
+      }
     }
 
     .about__row {
@@ -133,7 +137,14 @@
 
   &__address_item {
     margin-right: 58px;
-    
+    display: flex;
+    flex-direction: column;
+
+    &:first-child .about__store {
+      color: @orange;
+      border-bottom: 1px solid @orange;
+      box-sizing: border-box;
+    }
 
     &:last-child {
       margin-right: 0;
@@ -145,7 +156,7 @@
     font-size: 20px;
     line-height: 24px;
     letter-spacing: 0.01em;
-    color: @orange;
+    width: max-content;
     max-width: 320px;
   }
 
@@ -154,8 +165,9 @@
     font-size: 18px;
     line-height: 22px;
     letter-spacing: 0.01em;
-    margin: 10px 0 16px;
-    max-width: 320px;
+    width: max-content;
+    max-width: 325px;
+    margin: 10px 0 20px;
   }
 
   &__phone {
@@ -164,17 +176,19 @@
     line-height: 22px;
     letter-spacing: 0.01em;
     max-width: 320px;
+    margin-top: auto;
   }
 
   &__articles {
     margin-bottom: 138px;
     position: relative;
 
-    .articles__list {
+    .articles_tile__list {
+      margin-top: 37px;
       gap: 84px 77px;
     }
 
-    .articles__item {
+    .articles_tile__item {
       width: min-content;
       height: min-content;
       position: relative;
@@ -188,7 +202,7 @@
         width: 447px;
         height: 339px;
   
-        .articles__caption {
+        .articles_tile__caption {
           bottom: -25px; 
           right: -39px;
           left: auto;
@@ -199,7 +213,7 @@
         width: 448px;
         height: 336px;
   
-        .articles__caption {
+        .articles_tile__caption {
           bottom: -48px; 
           right: -56px;
         }
@@ -209,14 +223,14 @@
         width: 405px;
         height: 351px;
   
-        .articles__caption {
+        .articles_tile__caption {
           bottom: -54px; 
           right: -99px;
         }
       }
     }
 
-    .articles__link {
+    .articles_tile__link {
       font-weight: 500;
       font-size: 30px;
       line-height: 37px;
@@ -276,7 +290,10 @@
 
   &__echo {
     width: 417px;
-    margin: auto 0;
+    margin: 30px 0 113px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 
     >p {
       margin: 0 0 57px;
@@ -288,6 +305,7 @@
     line-height: 37px;
     letter-spacing: 0.01em;
     color: @orange;
+    width: max-content;
     margin: 0 0 0 5px;
     position: relative;
 
@@ -419,11 +437,9 @@
     &__address_item {
       max-width: 277px;
       margin: 0 58px 50px 0;
-      
   
       &:last-child {
-        margin-right: 0;
-        margin-left: -10px;
+        margin: 0;
       }
     }
 
@@ -446,17 +462,23 @@
     &__articles {
       margin-bottom: 67px;
       position: relative;
-  
-      .articles__list {
+
+      .articles_tile__title {
+        margin-top: 62px;
+        text-align: left;
+      }
+
+      .articles_tile__list {
         gap: 84px 77px;
       }
   
-      .articles__item {
+      .articles_tile__item {
         &:nth-child(1) {
           width: 344px;
           height: 261px;
+          margin-left: 0;
     
-          .articles__caption {
+          .articles_tile__caption {
             bottom: -30px; 
             right: auto;
             left: -5px;
@@ -467,7 +489,7 @@
           width: 344px;
           height: 261px;
     
-          .articles__caption {
+          .articles_tile__caption {
             bottom: -26px; 
             right: auto;
             left: -5px;
@@ -477,8 +499,9 @@
         &:nth-child(3) {
           width: 345px;
           height: 259px;
+          margin-left: 0;
     
-          .articles__caption {
+          .articles_tile__caption {
             bottom: -30px; 
             right: auto;
             left: -5px;
@@ -486,7 +509,7 @@
         }
       }
   
-      .articles__link {
+      .articles_tile__link {
         font-size: 26px;
         line-height: 32px;
         margin: 60px 0 0;
