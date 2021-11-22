@@ -1,0 +1,359 @@
+.info {
+  &__row {
+    max-width: 1200px;
+  }
+
+  &__paginnation {
+    width: max-content;
+    display: flex;
+    position: static;
+    margin: 22px 0 0;
+  }
+
+  &__page_btn {
+    font-size: 24px;
+    line-height: 32px;
+    letter-spacing: 0.01em;
+    width: max-content;
+    height: auto;
+    margin: 0 32px 0 0 !important;
+    background: none;
+    opacity: 1;
+    display: inline;
+    position: static;
+
+    &.swiper-pagination-bullet-active {
+      color: @orange;
+      text-decoration: underline;
+    }
+
+    &:last-child {
+      margin: 0 !important;
+    }
+  }
+
+  &__section {
+    padding: 60px 0;
+  }
+
+  &__benefits {
+    padding: 83px 0 94px;
+  }
+
+  &__benefits_list {
+    margin: 0 82px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 50px 33px;
+  }
+
+  &__benefits_item {
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 22px;
+    letter-spacing: 0.01em;
+    margin: 0;
+    position: relative;
+
+    &:last-child {
+      margin: 0;
+    }
+
+    &::before {
+      content: "";
+      width: 6px;
+      height: 6px;
+      background-color: @orange;
+      border-radius: 50%;
+      display: block;
+      position: absolute;
+      top: 7px;
+      left: -12px;
+    }
+  }
+
+  &__reviews {
+    padding: 40px 0 35px;
+    display: flex;
+  }
+
+  &__reviews_list {
+    width: 656px;
+    margin: 0 45px 0 0;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__reviews_item {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-bottom: 35px;
+
+    &:last-child {
+      margin: 0;
+    }
+  }
+
+  &__author {
+    font-weight: normal;
+    font-size: 30px;
+    line-height: 37px;
+    letter-spacing: 0.01em;
+    margin: 0 5px 0 55px;
+  }
+
+  &__date {
+    font-size: 18px;
+    line-height: 22px;
+    letter-spacing: 0.01em;
+    color: rgba(6, 6, 6, 0.62);
+    margin-bottom: 3px;
+    align-self: flex-end;
+  }
+
+  &__review_text {
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 22px;
+    letter-spacing: 0.01em;
+    margin: 18px 0 0;
+  }
+
+  &__total {
+    width: 330px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    align-content: flex-start;
+  }
+
+  &__total_rating {
+    width: 176.41px;
+    height: 31.93px;
+    margin-right: auto;
+  }
+
+  &__total_rating_text {
+    font-size: 30px;
+    line-height: 37px;
+    letter-spacing: 0.01em;
+  }
+
+  &__reviews_statistic {
+    width: 100%;
+    margin: 15px 0 25px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__reviews_stat {
+    width: 100%;
+    display: flex;
+    align-items: flex-end;
+
+    >p {
+      font-weight: normal;
+      font-size: 18px;
+      line-height: 22px;
+      letter-spacing: 0.01em;
+      color: rgba(6, 6, 6, 0.62);
+      margin: 0 auto 10px 0;
+    }
+  }
+
+  &__stat_bar {
+    width: 200px;
+    height: 4px;
+    margin-bottom: 4px;
+    background-color: #C4C4C4;
+    border-radius: 5px;
+  }
+
+  &__stat_fill {
+    height: 100%;
+    background-color: @orange;
+    border-radius: 5px;
+  }
+
+  &__reviews_add_btn {
+    font-size: 20px;
+    line-height: 24px;
+    letter-spacing: 0.02em;
+    color: @white;
+    width: 199px;
+    height: 42px;
+    margin: 0 0 auto auto;
+    background: @orange;
+    border-radius: 20px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .info {
+    &__row {
+      max-width: 960px;
+    }
+  
+    &__paginnation {
+      margin: 35px 0 0;
+    }
+  
+    &__page_btn {
+      font-size: 19px;
+      line-height: 23px;
+      margin: 0 28px 0 0 !important;
+    }
+  
+    &__benefits {
+      padding: 70px 0 80px;
+    }
+  
+    &__benefits_list {
+      margin: 0;
+      gap: 40px 23px;
+    }
+  
+    &__benefits_item {
+      font-size: 16px;
+      line-height: 20px;
+    }
+  
+    &__reviews {
+      padding: 45px 0 75px;
+      margin-left: 37px;
+      display: flex;
+    }
+  
+    &__reviews_list {
+      width: 516px;
+      margin: 0 30px 0 0;
+      display: flex;
+      flex-direction: column;
+    }
+  
+    &__reviews_item {
+      margin-bottom: 45px;
+    }
+  
+    &__author {
+      font-size: 24px;
+      line-height: 29px;
+      margin: 0 18px 0 28px;
+    }
+  
+    &__date {
+      font-size: 16px;
+      line-height: 20px;
+      margin-bottom: 2px;
+    }
+  
+    &__review_text {
+      font-size: 16px;
+      line-height: 20px;
+      margin: 10px 0 0;
+    }
+  
+    &__total {
+      width: 276px;
+    }
+  
+    &__total_rating {
+      width: 153.41px;
+      height: 27.76px;
+    }
+  
+    &__total_rating_text {
+      font-size: 24px;
+      line-height: 29px;
+    }
+  
+    &__reviews_statistic {
+      margin: 20px 0;
+    }
+  
+    &__reviews_stat {
+      >p {
+        font-size: 14px;
+        line-height: 17px;
+        margin: 0 auto 8px 0;
+      }
+    }
+  
+    &__stat_bar {
+      width: 176px;
+    }
+  
+    &__reviews_add_btn {
+      font-size: 18px;
+      line-height: 22px;
+      width: 177px;
+      height: 40px;
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  .info {
+    &__row {
+      max-width: 375px;
+    }
+  
+    &__paginnation {
+      margin: 12px 0 0;
+      justify-content: space-between;
+    }
+  
+    &__page_btn {
+      font-size: 12px;
+      line-height: 15px;
+      margin: 0 !important;
+    }
+  
+    &__benefits {
+      padding: 20px 0 30px;
+    }
+  
+    &__benefits_list {
+      max-width: 285px;
+      margin: 0 auto;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 17px 40px;
+    }
+  
+    &__benefits_item {
+      font-size: 10px;
+      line-height: 12px;
+    }
+  
+    &__reviews {
+      padding: 30px 0 25px;
+      margin-left: 0;
+      flex-direction: column;
+    }
+  
+    &__total {
+      width: 262px;
+      margin: auto;
+    }
+  
+    &__reviews_stat {
+      >p {
+        font-size: 12px;
+        line-height: 15px;
+      }
+    }
+
+    &__stat_bar {
+      margin-bottom: 10px;
+    }
+  
+    &__reviews_add_btn {
+      font-size: 20px;
+      line-height: 24px;
+      width: 100%;
+      height: 43px;
+      padding: 9px 0;
+    }
+  }
+}

@@ -74,7 +74,7 @@ $.each($filter__dropdown, function() {
 
 
 
-/* ********** Footer Menu ********** */
+/* ********** Header Menu ********** */
 
 const $header__open_menu = $('.header__open_menu'),
       $header__close_menu = $('.header__close_menu'),
@@ -116,4 +116,107 @@ $.each($footer_menu, function() {
 
     $menu.toggleClass('open');
   })
+})
+
+
+
+
+
+/* ********** Materials ********** */
+
+const $material_page__dropdown = $('.material_page__dropdown');
+
+$.each($material_page__dropdown, function() {
+  const $dropdown = $(this);
+        $caption = $dropdown.find('.material_page__caption');
+
+  $caption.on('click', function(evt) {
+    evt.preventDefault();
+
+    $dropdown.toggleClass('open');
+  })
+})
+
+
+
+
+
+/* ********** Product Page ********** */
+
+const INFO_SECTIONS = ['Описание', 'Характеристики', 'Материалы', 'Преимущества', 'Отзывы', 'Вопрос-ответ'];
+const INFO_SECTIONS_MOBILE1 = ['Описание', 'Характеристики', 'Преимущества'];
+const INFO_SECTIONS_MOBILE2 = ['Отзывы', 'Вопрос-ответ', 'Материалы'];
+
+const $big_img = $('.product_page__big_image');
+
+const product_page__swiper = new Swiper ('.product_page__swiper', {
+  direction: 'horizontal',
+  loop: false,
+  navigation: {
+    nextEl: '.product_page__swiper_next',
+    prevEl: '.product_page__swiper_prev',
+  },
+  slidesPerView: 3,
+  breakpoints: {
+    992: {
+      slidesPerView: 'auto',
+    },
+  },
+})
+
+$('.product_page__swiper .product_page__image').on('click', function() {
+  const img_path = $(this).attr("src");
+
+  $big_img.attr("src", img_path);
+})
+
+const info_swiper1 = new Swiper ('.info__row--desktop', {
+  allowTouchMove: false,
+  autoHeight: true,
+  loop: false,
+  effect: 'fade',
+  fadeEffect: {
+      crossFade: true
+    },
+  pagination: {
+    el: '.info__paginnation',
+    clickable: true,
+      renderBullet: function (index, className) {
+        return '<span class="' + className + ' info__page_btn">' + (INFO_SECTIONS[index]) + '</span>';
+      },
+  },
+})
+
+const info_swiper2 = new Swiper ('.info__row--mobile1', {
+  allowTouchMove: false,
+  autoHeight: true,
+  loop: false,
+  effect: 'fade',
+  fadeEffect: {
+      crossFade: true
+    },
+  pagination: {
+    el: '.info__paginnation',
+    clickable: true,
+      renderBullet: function (index, className) {
+        return '<span class="' + className + ' info__page_btn">' + (INFO_SECTIONS_MOBILE1[index]) + '</span>';
+      },
+  },
+})
+
+const info_swiper3 = new Swiper ('.info__row--mobile2', {
+  allowTouchMove: false,
+  autoHeight: true,
+  loop: false,
+  effect: 'fade',
+  fadeEffect: {
+      crossFade: true
+    },
+  pagination: {
+    el: '.info__paginnation',
+    clickable: true,
+      renderBullet: function (index, className) {
+        return '<span class="' + className + ' info__page_btn">' + (INFO_SECTIONS_MOBILE2[index]) + '</span>';
+      },
+  },
 })

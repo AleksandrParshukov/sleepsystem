@@ -1,0 +1,217 @@
+.licenses {
+  &__row {
+    margin: 0 auto 90px;
+
+    &:nth-child(2) {
+      margin: 0 auto;
+    }
+
+    >p {
+      font-weight: normal;
+      font-size: 18px;
+      line-height: 22px;
+      letter-spacing: 0.01em;
+      margin: 0 0 45px 88px;
+    }
+  }
+
+  &__title {
+    margin: 30px 0 45px;
+  }
+  
+  &__caption {
+    font-size: 40px;
+    line-height: 49px;
+    letter-spacing: 0.02em;
+    margin-bottom: 25px;
+  }
+
+  &__list {
+    width: max-content;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &__item {
+    width: min-content;
+    margin: 0 50px 0 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &:nth-child(4n),
+    &:last-child {
+      margin: 0;
+    }
+
+    >p {
+      font-weight: normal;
+      font-size: 16px;
+      line-height: 20px;
+      text-align: center;
+      letter-spacing: 0.01em;
+    }
+  }
+
+  &__certificate {
+    width: 219px;
+    height: 308px;
+    margin-bottom: 13px;
+    border: 1px solid rgba(0, 0, 0, 0.26);
+    border-radius: 8px;
+    box-sizing: border-box;
+  }
+
+  &__dropdown_wrap {
+    width: 100%;
+    margin-top: 70px;
+    border-bottom: 1px solid @black;
+
+    >p {
+      font-size: 18px;
+      line-height: 22px;
+      letter-spacing: 0.01em;
+      width: max-content;
+      margin-bottom: 12px;
+      
+      position: relative;
+  
+      &::after {
+        content: "";
+        width: 45px;
+        height: 17px;
+        background: url("../img/chevron_black_down.svg") no-repeat center;
+        background-size: contain;
+        display: block;
+        position: absolute;
+        top: 50%;
+        right: -76px;
+        transform: translateY(-50%);
+        transition: transform 0.4s;
+      }
+    }
+  }
+
+  &__contacts {
+    padding: 53px 0;
+    margin: 110px -100% 0;
+    box-shadow: 0 -6px 26px -16px rgba(0,0,0,.08);
+
+    >p:first-child {
+      font-size: 40px;
+      line-height: 49px;
+      letter-spacing: 0.02em;
+      color: #00A64C;
+      width: max-content;
+      margin: 0 108px 0 auto;
+    }
+
+    >p:last-child {
+      width: max-content;
+      margin: 0 auto 0 0;
+
+      >a {
+        font-size: 40px;
+        line-height: 49px;
+        color: @orange;
+      }
+      
+      >a:last-child {
+        letter-spacing: 0.04em;
+      }
+
+
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  .licenses {
+    &__row {
+      margin: 0 auto 55px;
+  
+      &:nth-child(2) {
+        margin: 0 auto;
+      }
+  
+      >p {
+        font-size: 16px;
+        line-height: 20px;
+        margin: 0 0 26px;
+      }
+    }
+  
+    &__title {
+      margin: 20px 0 27px;
+    }
+    
+    &__caption {
+      font-size: 26px;
+      line-height: 32px;
+      margin-bottom: 9px;
+    }
+  
+    &__list {
+      width: 100%;
+      justify-content: space-between;
+    }
+  
+    &__item {
+      width: min-content;
+      margin: 0 0 25px;
+  
+      >p {
+        font-size: 12px;
+        line-height: 15px;
+      }
+    }
+  
+    &__certificate {
+      width: 164px;
+      height: 231px;
+      margin-bottom: 10px;
+    }
+  
+    &__dropdown_wrap {
+      margin-top: 0;
+      position: relative;
+  
+      >p {
+        font-size: 14px;
+        line-height: 17px;
+        width: 227px;
+        margin-bottom: 10px;
+        position: static;
+    
+        &::after {
+          right: 0px;
+        }
+      }
+    }
+
+    &__contacts {
+      padding: 40px 0 56px !important;
+      margin: 0;
+      flex-direction: column;
+      align-items: center;
+
+      >p:first-child {
+        font-size: 26px;
+        line-height: 32px;
+        text-align: center;
+        width: 312px;
+        margin: 0 0 20px;
+      }
+
+      >p:last-child {
+        margin: 0;
+
+        >a {
+          font-size: 26px;
+          line-height: 32px;
+        }
+      }
+    }
+  }
+}
