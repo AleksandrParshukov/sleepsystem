@@ -3,6 +3,10 @@
 *::after {
   box-sizing: border-box;
 }
+html {
+  min-height: 100%;
+  overflow-x: hidden;
+}
 body {
   font-family: 'Montserrat', 'Arial', sans-serif;
   font-style: normal;
