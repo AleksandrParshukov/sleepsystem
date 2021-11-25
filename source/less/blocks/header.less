@@ -1,6 +1,6 @@
 .header {
   position: relative;
-  z-index: 20;
+  z-index: 200;
   
   &__control_container {
     background-color: @orange;
@@ -38,6 +38,11 @@
     &:last-child {
       margin-top: 7px;
     }
+
+    &:hover,
+    &:active {
+      color: @white;
+    }
   }
 
   &__since {
@@ -58,14 +63,13 @@
   }
 
   &__main_nav_container {
-    padding: 15px 0;
     background-color: @dark-gray;
   }
 
   &__main_nav_row {
     max-width: 1045px;
-    padding: 0;
     margin: 0 auto;
+    position: relative;
   }
 }
 
@@ -154,11 +158,12 @@
     }
   
     &__main_nav_container {
-      width: 375px;
-      height: 100vh;
-      padding: 20px;
+      width: 100%;
+      padding: 45px 30px;
+      background-color: @white;
       position: fixed;
       top: 0;
+      bottom: 0;
       right: 0;
       transform: translateX(100%);
       transition: transform 0.3s ease-in-out;
@@ -173,7 +178,14 @@
       max-width: none;
       margin: 0;
       flex-direction: column;
-      align-items: flex-end;
+      align-items: flex-start;
+      position: static;
+    }
+
+    &__close_menu {
+      position: absolute;
+      top: 18px;
+      right: 16px;
     }
   }
 }

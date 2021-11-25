@@ -13,6 +13,34 @@
     color: @white;
     margin-top: auto;
   }
+
+  &__icon {
+    background-repeat: no-repeat;
+    background-size: contain;
+
+    &--comparison {
+      width: 23px;
+      height: 29px;
+      background-image: url("../img/comparison.svg");
+    }
+
+    &--favorites {
+      width: 30px;
+      height: 27px;
+      background-image: url("../img/favorites.svg");
+
+      &:active {
+        background-image: url("../img/favorites_white_fill.svg");
+      }
+    }
+
+    &--cart {
+      width: 46px;
+      height: 33px;
+      background-image: url("../img/cart.svg");
+      background-position: left bottom;
+    }
+  }
 }
 
 

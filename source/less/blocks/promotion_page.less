@@ -7,22 +7,27 @@
       border: none;
       position: relative;
 
-      &::before {
+      .promotion_page__text {
+        position: relative;
+        margin-bottom: 0;
+      }
+
+      .promotion_page__text::before {
         content: "";
-        width: 28px;
-        height: 106px;
+        width: 25px;
+        height: 94px;
         background: url("../img/exclamation.svg") no-repeat center;
         background-size: contain;
         display: block;
         position: absolute;
-        left: 21px;
-        top: -55px;
+        left: -67px;
+        bottom: 3px;
       }
     }
   }
 
   &__title {
-    margin: 30px 0 15px;
+    margin: 0 0 15px;
   }
 
   &__date {
@@ -137,7 +142,7 @@
     }
   
     &__title {
-      margin: 23px 0 5px;
+      margin: 0 0 5px;
     }
   
     &__date {

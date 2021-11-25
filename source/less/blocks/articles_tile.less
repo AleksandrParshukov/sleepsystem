@@ -10,7 +10,7 @@
     margin-top: 70px;
     display: grid;
     grid-template-columns: min-content min-content;
-    gap: 60px 40px;
+    gap: 40px 60px;
     align-items: center;
   }
 
@@ -79,9 +79,19 @@
     width: max-content;
     padding: 17px 15px;
     background: @orange;
-    box-shadow: 5px 5px 30px rgba(83, 81, 79, 0.1);
     border-radius: 20px;
     position: absolute;
+
+    &:hover {
+      color: @white;
+      box-shadow: -5px 5px 20px rgba(255, 130, 25, 0.4);
+    }
+
+    &:active {
+      color: @white;
+      background: linear-gradient(0deg, rgba(0, 0, 0, 0.02), rgba(0, 0, 0, 0.02)), #FF8219;
+      box-shadow: none;
+    }
   }
 
   &__link {
@@ -167,6 +177,7 @@
       line-height: 22px;
       padding: 8px 14px;
       border-radius: 15px;
+      display: block;
     }
   
     &__link {

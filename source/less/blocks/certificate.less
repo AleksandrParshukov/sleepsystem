@@ -68,7 +68,7 @@
     max-height: 41px;
     padding: 9px 0 9px 20px;
     margin-bottom: 10px;
-    border: 1.5px solid #FF8219;
+    border: 1.5px solid @orange;
     box-sizing: border-box;
     border-radius: 20px;
 
@@ -92,9 +92,19 @@
     color: @white;
     max-width: 322px;
     padding: 15px 32px;
-    background: #FF8219;
-    box-shadow: -5px 5px 20px rgba(255, 130, 25, 0.4);
+    background: @orange;
     border-radius: 25px;
+
+    &:hover {
+      color: @white;
+      box-shadow: -5px 5px 20px rgba(255, 130, 25, 0.4);
+    }
+
+    &:active {
+      color: @white;
+      background: linear-gradient(0deg, rgba(0, 0, 0, 0.02), rgba(0, 0, 0, 0.02)), @orange;
+      box-shadow: none;
+    }
   }
 
   &__conditions {
@@ -202,7 +212,7 @@
     }
     
     &__caption--top {
-      margin: 20px 0;
+      margin: 0;
     }
   
     &__benefits {

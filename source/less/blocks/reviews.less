@@ -33,9 +33,19 @@
     padding: 15px 30px;
     margin: 0 auto;
     background: @orange;
-    box-shadow: -5px 5px 20px rgba(255, 130, 25, 0.4);
     border-radius: 20px;
     display: block;
+
+    &:hover {
+      color: @white;
+      box-shadow: -5px 5px 20px rgba(255, 130, 25, 0.4);
+    }
+
+    &:active {
+      color: @white;
+      background: linear-gradient(0deg, rgba(0, 0, 0, 0.02), rgba(0, 0, 0, 0.02)), @orange;
+      box-shadow: none;
+    }
   }
 
   &__control {
@@ -58,6 +68,17 @@
       right: -48px;
       transform: translateY(-50%) rotate(-90deg);
       background-position: top 12px center;
+    }
+
+    &:hover {
+      color: @white;
+      box-shadow: -5px 5px 20px rgba(255, 130, 25, 0.4);
+    }
+
+    &:active {
+      color: @white;
+      background: linear-gradient(0deg, rgba(0, 0, 0, 0.02), rgba(0, 0, 0, 0.02)), @orange;
+      box-shadow: none;
     }
   }
 }

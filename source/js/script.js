@@ -87,6 +87,8 @@ $.each($filter__dropdown, function() {
 
 const $header__open_menu = $('.header__open_menu'),
       $header__close_menu = $('.header__close_menu'),
+      $dropdown_links = $('.main_nav__item--dropdown .main_nav__link'),
+      $submenu__close_btn = $('.submenu__close_btn'),
       $header__main_nav_container = $('.header__main_nav_container'),
       $header__search_btn = $('.header__search_btn');
 
@@ -106,6 +108,20 @@ $header__search_btn.on('click', function(evt) {
   evt.preventDefault();
 
   $header__search_btn.parent().toggleClass('open');
+})
+
+$dropdown_links.on('click', function(evt) {
+  evt.preventDefault();
+
+  $(this).closest('.main_nav__item').find('.submenu').addClass('open');
+  $('body').addClass('modal_open');
+})
+
+$submenu__close_btn.on('click', function(evt) {
+  evt.preventDefault();
+
+  $submenu__close_btn.closest('.submenu').removeClass('open');
+  $('body').removeClass('modal_open');
 })
 
 
@@ -156,7 +172,10 @@ const INFO_SECTIONS = ['Описание', 'Характеристики', 'Ма
 const INFO_SECTIONS_MOBILE1 = ['Описание', 'Характеристики', 'Преимущества'];
 const INFO_SECTIONS_MOBILE2 = ['Отзывы', 'Вопрос-ответ', 'Материалы'];
 
-const $big_img = $('.product_page__big_image');
+const $big_img = $('.product_page__big_image'),
+      $product_page__size_wrap = $('.product_page__size_wrap'),
+      $product_page__size_caption = $product_page__size_wrap.find('.product_page__size_caption'),
+      $product_page__size_list = $product_page__size_wrap.find('.product_page__size_list');
 
 const product_page__swiper = new Swiper ('.product_page__swiper', {
   direction: 'horizontal',
@@ -228,4 +247,10 @@ const info_swiper3 = new Swiper ('.info__row--mobile2', {
         return '<span class="' + className + ' info__page_btn">' + (INFO_SECTIONS_MOBILE2[index]) + '</span>';
       },
   },
+})
+
+$product_page__size_caption.on('click', function(evt) {
+  evt.preventDefault();
+
+  $product_page__size_wrap.toggleClass('open');
 })

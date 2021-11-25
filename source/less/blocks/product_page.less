@@ -18,7 +18,7 @@
     line-height: 59px;
     letter-spacing: 0.01em;
     width: 662px;
-    margin: 30px 0 26px;
+    margin: 0 0 26px;
   }
 
   &__big_image {
@@ -107,10 +107,22 @@
   }
 
   &__size_wrap {
-    padding: 30px 0;
+    padding: 30px 0 10px;
     margin: 45px 0 0;
     border-top: 0.5px solid #000000;
     border-bottom: 0.5px solid #000000;
+  }
+
+  &__size_wrap.open {
+    .product_page__size_caption::before {
+      content: none;
+    }
+
+    .product_page__size_list {
+      max-height: 200px;
+      padding-bottom: 10px;
+      transition: max-height 0.4s linear;
+    }
   }
 
   &__size_caption {
@@ -118,7 +130,9 @@
     font-size: 30px;
     line-height: 37px;
     letter-spacing: 0.01em;
+    margin-bottom: 20px;
     position: relative;
+    cursor: pointer;
 
     &::before,
     &::after {
@@ -143,6 +157,26 @@
     }
   }
 
+  &__size_list {
+    margin: 0 0 0 90px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.25s linear,
+                padding 0.28s linear;
+  }
+
+  &__size_item {
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 22px;
+    letter-spacing: 0.01em;
+    margin-bottom: 13px;
+
+    &:last-child {
+      margin: 0;
+    }
+  }
+
   &__specifications {
     margin-top: 28px;
     justify-content: space-between;
@@ -162,8 +196,7 @@
     }
   }
 
-  &__specification_icon,
-  &__control_icon  {
+  &__specification_icon {
     margin: 0 auto;
   }
 
@@ -177,6 +210,17 @@
     margin: 30px 0 20px;
     background: @orange;
     border-radius: 20px;
+
+    &:hover {
+      color: @white;
+      box-shadow: -5px 5px 20px rgba(255, 130, 25, 0.4);
+    }
+
+    &:active {
+      color: @white;
+      background: linear-gradient(0deg, rgba(0, 0, 0, 0.02), rgba(0, 0, 0, 0.02)), @orange;
+      box-shadow: none;
+    }
   }
 
   &__control {
@@ -188,7 +232,7 @@
     display: flex;
     flex-wrap: wrap;
 
-    >p {
+    p {
       font-weight: normal;
       font-size: 14px;
       line-height: 17px;
@@ -196,6 +240,35 @@
       text-align: center;
       width: max-content;
       margin-top: auto;
+    }
+  }
+
+  &__control_icon {
+    margin: 0 auto;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+
+    &--repost {
+      width: 31.29px;
+      height: 28px;
+      background-image: url("../img/repost_orange.svg");
+    }
+
+    &--favorites {
+      width: 27px;
+      height: 25px;
+      background-image: url("../img/favorites_orange.svg");
+
+      &:active {
+        background-image: url("../img/favorites_orange_fill.svg");
+      }
+    }
+
+    &--comparison {
+      width: 20px;
+      height: 25px;
+      background-image: url("../img/comparison_orange.svg");
     }
   }
 
@@ -243,7 +316,7 @@
       line-height: 49px;
       letter-spacing: 0.01em;
       width: 516px;
-      margin: 12px 0 0;
+      margin: 0;
     }
   
     &__big_image {
@@ -343,7 +416,7 @@
       font-size: 30px;
       line-height: 37px;
       width: 100%;
-      margin: 20px 0 10px;
+      margin: 0 0 10px;
     }
   
     &__big_image {

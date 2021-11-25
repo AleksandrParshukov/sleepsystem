@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link href="./css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="css/swiper.css">
   <link rel="stylesheet" href="css/style.min.css">
@@ -40,15 +40,15 @@
   
         <div class="header_control d-none d-md-flex">
           <a class="header_control__item d-flex flex-wrap" href="blank.html">
-            <img class="header_control__icon" src="img/comparison.svg">
+            <div class="header_control__icon header_control__icon--comparison"></div>
             <p class="header_control__text">сравнение</p>
           </a>
           <a class="header_control__item d-flex flex-wrap" href="blank.html">
-            <img class="header_control__icon" src="img/favorites.svg">
+            <div class="header_control__icon header_control__icon--favorites"></div>
             <p class="header_control__text">избранное</p>
           </a>
           <a class="header_control__item d-flex flex-wrap" href="cart.html">
-            <img class="header_control__icon" src="img/cart.svg">
+            <div class="header_control__icon header_control__icon--cart"></div>
             <p class="header_control__text">корзина</p>
           </a>
         </div>
@@ -60,9 +60,9 @@
 
     <div class="header__main_nav_container container d-md-block">
       <div class="header__main_nav_row d-flex">
-        <button class="header__close_menu d-md-none"><img src="img/cross.svg" width="24" height="24"></button>
+        <button class="header__close_menu d-md-none"><img src="img/cross.svg" width="26" height="26"></button>
 
-        <nav class="main_nav d-flex">
+        <nav class="main_nav d-none d-sm-flex">
           <ul class="main_nav__list d-flex">
             <li class="main_nav__item">
               <a class="main_nav__link" href="contacts.html">Магазины</a>
@@ -72,6 +72,65 @@
             </li>
             <li class="main_nav__item">
               <a class="main_nav__link" href="mattresses.html">Матрасы</a>
+
+              <div class="main_nav__submenu submenu">
+                <div class="submenu__container">
+                  <div class="submenu__wrapper submenu__wrapper--big">
+                    <p class="submenu__caption">Виды матрасов</p>
+                    <ul class="submenu__list">
+                      <li class="submenu__item"><a class="submenu__link" href="blank.html">Пружинные</a></li>
+                      <li class="submenu__item"><a class="submenu__link" href="blank.html">Беспружинные</a></li>
+                      <li class="submenu__item"><a class="submenu__link" href="blank.html">Кокосовые</a></li>
+                      <li class="submenu__item"><a class="submenu__link" href="blank.html">Латексные</a></li>
+                      <li class="submenu__item"><a class="submenu__link" href="blank.html">Тонкие</a></li>
+                      <li class="submenu__item"><a class="submenu__link" href="blank.html">Для диванов</a></li>
+                      <li class="submenu__item"><a class="submenu__link" href="blank.html">Круглые</a></li>
+                      <li class="submenu__item"><a class="submenu__link" href="blank.html">С эффектом памяти</a></li>
+                      <li class="submenu__item"><a class="submenu__link" href="blank.html">Ортопедические</a></li>
+                    </ul>
+  
+                    <a class="submenu__outer_link" href="mattresses.html">Все матрасы</a>
+                  </div>
+  
+                  <div class="submenu__wrapper">
+                    <p class="submenu__caption">Для кого?</p>
+                    <ul class="submenu__list">
+                      <li class="submenu__item"><a class="submenu__link" href="blank.html">Детские матрасы</a></li>
+                      <li class="submenu__item"><a class="submenu__link" href="blank.html">Для взрослых</a></li>
+                      <li class="submenu__item"><a class="submenu__link" href="blank.html">Для пожилых</a></li>
+                    </ul>
+                  </div>
+  
+                  <div class="submenu__wrapper">
+                    <p class="submenu__caption">Жесткость</p>
+                    <ul class="submenu__list">
+                      <li class="submenu__item"><a class="submenu__link" href="blank.html">Жесткие</a></li>
+                      <li class="submenu__item"><a class="submenu__link" href="blank.html">Средней жесткости</a></li>
+                      <li class="submenu__item"><a class="submenu__link" href="blank.html">Мягкие</a></li>
+                      <li class="submenu__item"><a class="submenu__link" href="blank.html">С разной жесткостью сторон</a></li>
+                    </ul>
+                  </div>
+  
+                  <div class="submenu__wrapper">
+                    <p class="submenu__caption">Размер</p>
+                    <ul class="submenu__list">
+                      <li class="submenu__item"><a class="submenu__link" href="blank.html">Двуспальные</a></li>
+                      <li class="submenu__item"><a class="submenu__link" href="blank.html">Односпальные</a></li>
+                      <li class="submenu__item"><a class="submenu__link" href="blank.html">Полутораспальные</a></li>
+                    </ul>
+                  </div>
+  
+                  <div class="submenu__wrapper">
+                    <p class="submenu__caption">Аксесссуары</p>
+                    <ul class="submenu__list">
+                      <li class="submenu__item"><a class="submenu__link" href="blank.html">Наматрасники</a></li>
+                      <li class="submenu__item"><a class="submenu__link" href="blank.html">Защитные чехлы</a></li>
+                      <li class="submenu__item"><a class="submenu__link" href="blank.html">Детские наматрасники</a></li>
+                      <li class="submenu__item"><a class="submenu__link" href="blank.html">Подушки</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
             </li>
             <li class="main_nav__item">
               <a class="main_nav__link" href="blank.html">Подушки</a>
@@ -91,20 +150,109 @@
           </ul>
         </nav>
 
-        <div class="header_control d-flex d-md-none">
-          <a class="header_control__item d-flex flex-wrap" href="blank.html">
-            <img class="header_control__icon" src="img/comparison.svg">
-            <p class="header_control__text">сравнение</p>
-          </a>
-          <a class="header_control__item d-flex flex-wrap" href="blank.html">
-            <img class="header_control__icon" src="img/favorites.svg">
-            <p class="header_control__text">избранное</p>
-          </a>
-          <a class="header_control__item d-flex flex-wrap" href="cart.html">
-            <img class="header_control__icon" src="img/cart.svg">
-            <p class="header_control__text">корзина</p>
-          </a>
-        </div>
+        <nav class="main_nav d-flex d-sm-none">
+          <ul class="main_nav__list d-flex">
+            <li class="main_nav__item main_nav__item--dropdown">
+              <a class="main_nav__link" href="mattresses.html">Матрасы</a>
+
+              <div class="main_nav__submenu submenu">
+                <button class="submenu__close_btn"><img src="img/cross.svg" width="26" height="26"></button>
+
+                <div class="submenu__container">
+                  <div class="submenu__wrapper submenu__wrapper--big">
+                    <p class="submenu__caption">Виды матрасов</p>
+                    <ul class="submenu__list">
+                      <li class="submenu__item"><a class="submenu__link" href="blank.html">Пружинные</a></li>
+                      <li class="submenu__item"><a class="submenu__link" href="blank.html">Беспружинные</a></li>
+                      <li class="submenu__item"><a class="submenu__link" href="blank.html">Кокосовые</a></li>
+                      <li class="submenu__item"><a class="submenu__link" href="blank.html">Латексные</a></li>
+                      <li class="submenu__item"><a class="submenu__link" href="blank.html">Тонкие</a></li>
+                      <li class="submenu__item"><a class="submenu__link" href="blank.html">Для диванов</a></li>
+                      <li class="submenu__item"><a class="submenu__link" href="blank.html">Круглые</a></li>
+                      <li class="submenu__item"><a class="submenu__link" href="blank.html">С эффектом памяти</a></li>
+                      <li class="submenu__item"><a class="submenu__link" href="blank.html">Ортопедические</a></li>
+                    </ul>
+                  </div>
+  
+                  <div class="submenu__wrapper">
+                    <p class="submenu__caption">Для кого?</p>
+                    <ul class="submenu__list">
+                      <li class="submenu__item"><a class="submenu__link" href="blank.html">Детские матрасы</a></li>
+                      <li class="submenu__item"><a class="submenu__link" href="blank.html">Для взрослых</a></li>
+                      <li class="submenu__item"><a class="submenu__link" href="blank.html">Для пожилых</a></li>
+                    </ul>
+                  </div>
+  
+                  <div class="submenu__wrapper">
+                    <p class="submenu__caption">Жесткость</p>
+                    <ul class="submenu__list">
+                      <li class="submenu__item"><a class="submenu__link" href="blank.html">Жесткие</a></li>
+                      <li class="submenu__item"><a class="submenu__link" href="blank.html">Средней жесткости</a></li>
+                      <li class="submenu__item"><a class="submenu__link" href="blank.html">Мягкие</a></li>
+                      <li class="submenu__item"><a class="submenu__link" href="blank.html">С разной жесткостью сторон</a></li>
+                    </ul>
+                  </div>
+  
+                  <div class="submenu__wrapper">
+                    <p class="submenu__caption">Размер</p>
+                    <ul class="submenu__list">
+                      <li class="submenu__item"><a class="submenu__link" href="blank.html">Двуспальные</a></li>
+                      <li class="submenu__item"><a class="submenu__link" href="blank.html">Односпальные</a></li>
+                      <li class="submenu__item"><a class="submenu__link" href="blank.html">Полутораспальные</a></li>
+                    </ul>
+                  </div>
+  
+                  <div class="submenu__wrapper">
+                    <p class="submenu__caption">Аксесссуары</p>
+                    <ul class="submenu__list">
+                      <li class="submenu__item"><a class="submenu__link" href="blank.html">Наматрасники</a></li>
+                      <li class="submenu__item"><a class="submenu__link" href="blank.html">Защитные чехлы</a></li>
+                      <li class="submenu__item"><a class="submenu__link" href="blank.html">Детские наматрасники</a></li>
+                      <li class="submenu__item"><a class="submenu__link" href="blank.html">Подушки</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="main_nav__item">
+              <a class="main_nav__link" href="blank.html">Кровати</a>
+            </li>
+            <li class="main_nav__item">
+              <a class="main_nav__link" href="blank.html">Диваны и кресла</a>
+            </li>
+            <li class="main_nav__item">
+              <a class="main_nav__link" href="blank.html">Подушки</a>
+            </li>
+            <li class="main_nav__item">
+              <a class="main_nav__link" href="blank.html">Текстиль</a>
+            </li>
+            <li class="main_nav__item">
+              <a class="main_nav__link" href="blank.html">Мебель</a>
+            </li>
+            <li class="main_nav__item">
+              <a class="main_nav__link" href="blank.html">Аксессуары</a>
+            </li>
+            <li class="main_nav__item">
+              <a class="main_nav__link" href="promotions.html">Распродажа</a>
+            </li>
+          </ul>
+
+
+          <ul class="main_nav__list d-flex">
+            <li class="main_nav__item">
+              <a class="main_nav__link" href="contacts.html">Список магазинов</a>
+            </li>
+            <li class="main_nav__item">
+              <a class="main_nav__link" href="delivery.html">Доставка</a>
+            </li>
+            <li class="main_nav__item">
+              <a class="main_nav__link" href="about.html">О компании</a>
+            </li>
+            <li class="main_nav__item">
+              <a class="main_nav__link" href="partnership.html">Партнёрам</a>
+            </li>
+          </ul>
+        </nav>
 
       </div>
     </div>
@@ -429,6 +577,58 @@
           </picture>
         </div>
       </div>
+    </div>
+
+    <div class="footer_control d-sm-none">
+      <ul class="footer_control__list d-flex">
+        <li class="footer_control__item">
+          <a class="footer_control__link">
+            <svg width="36" height="23" viewBox="0 0 36 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M1 1H29M27 18H1M1 8.97959H17.5" stroke="#060606" stroke-linecap="round" stroke-linejoin="round"/>
+              <circle r="4.92373" transform="matrix(-1 0 0 1 24.4239 11.4237)" stroke="#060606"/>
+              <path d="M28.2203 15.2203L35 22" stroke="#060606"/>
+            </svg>
+            <span>каталог</span>
+          </a>
+        </li>
+        <li class="footer_control__item">
+          <a class="footer_control__link">
+            <svg width="25" height="23" viewBox="0 0 25 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M11.1483 20.8218C11.6351 21.246 12.0858 21.6415 12.4838 22C16.1145 18.826 22.1545 14.3092 23.7388 9.91446C25.191 5.88597 20.4712 -2.90353 12.4838 2.95612C8.12713 -1.0724 -0.513794 1.12498 1.2289 9.91446C1.60235 11.798 4.11769 14.4787 6.83736 17M10.204 20C9.69312 19.5554 9.15813 19.0885 8.61452 18.6069" stroke="#060606" stroke-linejoin="round"/>
+            </svg>
+            <span>избранное</span>
+          </a>
+        </li>
+        <li class="footer_control__item">
+          <a class="footer_control__link">
+            <svg width="30" height="25" viewBox="0 0 30 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M21.6889 7.6C21.6889 11.5478 18.6683 14.7 14.9997 14.7C11.3312 14.7 8.31055 11.5478 8.31055 7.6C8.31055 3.65224 11.3312 0.5 14.9997 0.5C18.6683 0.5 21.6889 3.65224 21.6889 7.6Z" stroke="#060606" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M1 24C5.29119 18.5667 16.8989 10.9601 29 24" stroke="#060606" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            <span>вход</span>
+          </a>
+        </li>
+        <li class="footer_control__item">
+          <a class="footer_control__link">
+            <svg width="42" height="26" viewBox="0 0 42 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M1 1L8.00163 1.74542L9.05764 6.96336L11.396 18.5174H29.7253L31.7619 6.96336H13.6721" stroke="#060606" stroke-linecap="round" stroke-linejoin="round"/>
+              <circle cx="15.9075" cy="22.9899" r="2.48168" stroke="#060606" stroke-linecap="round" stroke-linejoin="round"/>
+              <circle cx="27.0891" cy="22.9899" r="2.48168" stroke="#060606" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            <span>корзина</span>
+          </a>
+        </li>
+        <li class="footer_control__item">
+          <a class="footer_control__link">
+            <svg width="17" height="26" viewBox="0 0 17 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M16.1667 8.33333C16.1667 9.37411 15.6843 10.9712 14.9032 12.8428C14.1311 14.6927 13.0983 16.7405 12.0605 18.6542C11.0235 20.5663 9.98586 22.3363 9.20714 23.6288C8.85447 24.2141 8.55514 24.7011 8.33333 25.0586C8.11153 24.7011 7.8122 24.2141 7.45952 23.6288C6.68081 22.3363 5.64318 20.5663 4.60619 18.6542C3.56834 16.7405 2.53553 14.6927 1.76351 12.8428C0.982409 10.9712 0.5 9.37411 0.5 8.33333C0.5 4.0071 4.0071 0.5 8.33333 0.5C12.6596 0.5 16.1667 4.0071 16.1667 8.33333Z" stroke="#060606"/>
+              <path d="M12.1667 8C12.1667 9.89607 10.4889 11.5 8.33333 11.5C6.17781 11.5 4.5 9.89607 4.5 8C4.5 6.10393 6.17781 4.5 8.33333 4.5C10.4889 4.5 12.1667 6.10393 12.1667 8Z" stroke="#060606"/>
+            </svg>
+            <span>контакты</span>
+          </a>
+        </li>
+
+      </ul>
     </div>
   </footer>
 

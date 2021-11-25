@@ -30,6 +30,10 @@
     &:last-child {
       margin: 0 !important;
     }
+
+    &:hover {
+      color: @orange;
+    }
   }
 
   &__section {
@@ -186,6 +190,17 @@
     margin: 0 0 auto auto;
     background: @orange;
     border-radius: 20px;
+
+    &:hover {
+      color: @white;
+      box-shadow: -5px 5px 20px rgba(255, 130, 25, 0.4);
+    }
+
+    &:active {
+      color: @white;
+      background: linear-gradient(0deg, rgba(0, 0, 0, 0.02), rgba(0, 0, 0, 0.02)), @orange;
+      box-shadow: none;
+    }
   }
 }
 
