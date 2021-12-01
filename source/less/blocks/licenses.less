@@ -66,7 +66,7 @@
   &__dropdown_wrap {
     width: 100%;
     margin-top: 70px;
-    border-bottom: 1px solid @black;
+    border-bottom: 1px solid @border-color;
 
     >p {
       font-size: 18px;
@@ -149,11 +149,14 @@
     &__caption {
       font-size: 26px;
       line-height: 32px;
-      margin-bottom: 9px;
+      width: min-content;
+      margin: 0 auto 9px;
     }
   
     &__list {
-      width: 100%;
+      width: 348px;
+      max-width: none;
+      margin: 0 -23px;
       justify-content: space-between;
     }
   

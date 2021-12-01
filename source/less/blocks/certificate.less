@@ -109,8 +109,8 @@
 
   &__conditions {
     padding: 29px 0;
-    border-top: 1px solid @black;
-    border-bottom: 1px solid @black;
+    border-top: 1px solid @border-color;
+    border-bottom: 1px solid @border-color;
   }
 
   &__conditions_title {
@@ -212,7 +212,8 @@
     }
     
     &__caption--top {
-      margin: 0;
+      width: max-content;
+      margin: 0 auto;
     }
   
     &__benefits {
@@ -269,12 +270,14 @@
     }
   
     &__conditions {
-      padding: 14px 10px 17px;
+      padding: 14px 33px 17px;
     }
   
     &__conditions_title {
       font-size: 26px;
       line-height: 32px;
+      width: min-content;
+      margin: 0 auto;
     }
   
     &__conditions_list {

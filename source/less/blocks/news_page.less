@@ -80,8 +80,10 @@
   
     &__image {
       width: 355px;
+      max-width: none;
       height: 138px;
-      margin-bottom: 41px;
+      margin: 0 0 41px 50%;
+      transform: translateX(-50%);
     }
   
     &__text {
@@ -93,7 +95,8 @@
     &__back_link {
       font-size: 18px;
       line-height: 22px;
-      padding: 0 0 0 70px;
+      width: max-content;
+      padding: 0 0 0 20px;
       margin: 0;
     }
   }

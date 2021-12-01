@@ -1,6 +1,6 @@
 .material_page {
   &__row {
-    border-bottom: 1px solid @black;
+    border-bottom: 1px solid @border-color;
 
     &:last-child {
       margin-bottom: 66px;
@@ -106,9 +106,10 @@
     &__back_link {
       font-size: 18px;
       line-height: 22px;
+      width: max-content;
       margin-left: auto;
   
-      .arrow-left(355px, @orange, -35px);
+      .arrow-left(335px, @orange, -23px);
   
       &::before,
       &::after {
@@ -116,8 +117,8 @@
       }
       
       &::after {
-        width: 20px;
-        height: 20px;
+        width: 15px;
+        height: 15px;
         transform: translate(2px,-50%) rotate(45deg);
       }
     }
@@ -146,7 +147,7 @@
         display: block;
         position: absolute;
         top: 50%;
-        right: 15px;
+        right: 0;
         transform: translateY(-50%);
         transition: transform 0.4s;
       }

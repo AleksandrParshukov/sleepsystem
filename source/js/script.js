@@ -6,6 +6,7 @@ const location_swiper = new Swiper ('.location__swiper', {
   direction: 'horizontal',
   loop: true,
   effect: 'fade',
+  allowTouchMove: false,
   fadeEffect: {
       crossFade: true
     },
@@ -128,9 +129,12 @@ $submenu__close_btn.on('click', function(evt) {
 
 
 
-/* ********** Footer Menu ********** */
+/* ********** Footer ********** */
 
-const $footer_menu = $('.footer_menu');
+const $footer_menu = $('.footer_menu'),
+      $footer_control = $('.footer_control'),
+      $footer_control__submenu_link = $footer_control.find('.footer_control__submenu_link'),
+      $footer_control__submenu_close = $footer_control.find('.footer_control__submenu_close');
 
 $.each($footer_menu, function() {
   const $menu = $(this);
@@ -141,6 +145,18 @@ $.each($footer_menu, function() {
 
     $menu.toggleClass('open');
   })
+})
+
+$footer_control__submenu_link.on('click', function(evt) {
+  evt.preventDefault();
+
+  $(this).parent().find('.footer_control__submenu').addClass('open');
+})
+
+$footer_control__submenu_close.on('click', function(evt) {
+  evt.preventDefault();
+
+  $(this).closest('.footer_control__submenu').removeClass('open');
 })
 
 

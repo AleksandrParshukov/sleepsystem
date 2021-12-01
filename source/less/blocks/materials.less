@@ -1,6 +1,6 @@
 .materials {
   &__row {
-    border-bottom: 1px solid @black;
+    border-bottom: 1px solid @border-color;
 
     &:last-child {
       margin-bottom: 125px;
@@ -95,12 +95,16 @@
 @media (max-width: 576px) {
   .materials {
     &__row {
+      padding-left: 10px;
+      padding-right: 10px;
+
       &:last-child {
         margin-bottom: 110px;
       }
     }
   
     &__title {
+      text-align: center;
       margin: 0 0 28px;
     }
   

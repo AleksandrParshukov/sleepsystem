@@ -1,6 +1,6 @@
 .promotion_page {
   &__row {
-    border-bottom: 1px solid @black;
+    border-bottom: 1px solid @border-color;
 
     &:last-child {
       margin: 75px auto;
@@ -128,11 +128,16 @@
       &:last-child {
         margin: 70px auto;
   
-        &::before {
+        .promotion_page__text::before {
+          content: "";
           width: 21.25px;
           height: 80px;
-          left: 10px;
-          top: 9px;
+          background: url("../img/exclamation.svg") no-repeat center;
+          background-size: contain;
+          display: block;
+          position: absolute;
+          left: -37px;
+          top: 6px;
         }
 
         .promotion_page__text {
@@ -153,8 +158,10 @@
     
     &__image {
       width: 399px;
+      max-width: none;
       height: 94px;
-      margin: 0 -3px 25px -21px;
+      margin: 0 0 25px 49%;
+      transform: translateX(-50%);
     }
   
     &__description {
@@ -165,7 +172,8 @@
     }
 
     &__caption {
-      margin: 17px 0;
+      width: max-content;
+      margin: 17px auto;
     }
   
     &__text {
@@ -195,7 +203,7 @@
       font-size: 18px;
       line-height: 22px;
       width: max-content;
-      padding: 0 56px 0 34px;
+      padding: 0 0 0 34px;
       margin: 30px 0 0;
     }
   }

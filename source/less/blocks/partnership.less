@@ -151,19 +151,19 @@
       padding-left: -10px;
     }
 
-    >div:not(div:first-child) {
-      padding: 0 10px;
-    }
-
     &__title {
       font-size: 30px;
       line-height: 37px;
       top: 216px;
       left: 11px;
     }
-    
-    &__caption--top {
-      margin: 0 0 -8px;
+    &__caption {
+
+      &--top {
+        width: 360px;
+        max-width: none;
+        margin: 0 -23px -8px;
+      }
     }
 
     &__row {
@@ -183,7 +183,11 @@
     &__logos {
       width: 471px;
       height: 387px;
+      max-width: none;
+      margin: 0 0 0 50%;
       position: static;
+      flex-shrink: 0;
+      transform: translateX(-50%);
     }
 
     &__hands {
