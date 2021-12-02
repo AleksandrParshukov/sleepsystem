@@ -1347,6 +1347,10 @@ input[type=number]::-webkit-outer-spin-button {
     margin-top: 32px;
     display: flex;
     flex-direction: column;
+    gap: 0;
+  }
+  .articles_tile__item {
+    margin-bottom: 42px;
   }
   .articles_tile__item:nth-child(1) {
     width: 309px;
@@ -1375,6 +1379,9 @@ input[type=number]::-webkit-outer-spin-button {
     bottom: -23px;
     right: auto;
     left: -48px;
+  }
+  .articles_tile__item:last-child {
+    margin-bottom: 0;
   }
   .articles_tile__caption {
     font-size: 14px;
@@ -4298,7 +4305,10 @@ input[type=number]::-webkit-outer-spin-button {
     text-align: left;
   }
   .about__articles .articles_tile__list {
-    gap: 84px 0;
+    gap: 0;
+  }
+  .about__articles .articles_tile__item {
+    margin-bottom: 83px;
   }
   .about__articles .articles_tile__item .articles_tile__caption {
     padding: 12px 11px;

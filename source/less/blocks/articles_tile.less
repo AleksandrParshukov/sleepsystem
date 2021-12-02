@@ -208,9 +208,12 @@
       margin-top: 32px;
       display: flex;
       flex-direction: column;
+      gap: 0;
     }
   
     &__item {  
+      margin-bottom: 42px;
+
       &:nth-child(1) {
         width: 309px;
         height: 206px;
@@ -243,6 +246,10 @@
           right: auto;
           left: -48px;
         }
+      }
+
+      &:last-child {
+        margin-bottom: 0;
       }
     }
   
