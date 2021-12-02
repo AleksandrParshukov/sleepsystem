@@ -5524,7 +5524,6 @@ input[type=number]::-webkit-outer-spin-button {
     width: 100vw;
     max-width: none;
     height: 23.6vw;
-    height: auto;
     margin: 0 0 25px 49%;
     transform: translateX(-50%);
     flex-shrink: 0;
