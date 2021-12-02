@@ -4169,7 +4169,7 @@ input[type=number]::-webkit-outer-spin-button {
   height: 20px;
   transform: translate(-2px, -50%) rotate(-45deg);
 }
-@media (max-width: 767px) {
+@media (max-width: 576px) {
   .about__title {
     font-size: 30px;
     line-height: 37px;
@@ -4384,9 +4384,9 @@ input[type=number]::-webkit-outer-spin-button {
     display: none;
   }
   .about__echo_img {
-    width: 110%;
+    width: 100vw;
     max-width: none;
-    height: auto;
+    height: 66.5vw;
     margin: 12px 0 30px 50%;
     border-radius: 0;
     transform: translateX(-50%);
