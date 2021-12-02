@@ -95,8 +95,10 @@
 @media (max-width: 576px) {
   .materials {
     &__row {
+      max-width: 375px;
       padding-left: 10px;
       padding-right: 10px;
+      margin: 0 auto;
 
       &:last-child {
         margin-bottom: 110px;
@@ -118,6 +120,7 @@
       margin: 0 auto 35px;
       grid-template-columns: repeat(2, 147px);
       gap: 32px 40px;
+      justify-content: center;
     }
   
     &__item {

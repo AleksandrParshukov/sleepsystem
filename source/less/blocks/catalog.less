@@ -243,5 +243,35 @@
         bottom: -10px;
       }
     }
+
+    &__more_btn {
+      font-weight: 500;
+      font-size: 12px;
+      line-height: 15px;
+      letter-spacing: 0.02em;
+      color: @orange;
+      width: 127px;
+      height: 27px;
+      margin: 0 auto;
+      background: @white;
+      border: 1px solid @orange;
+      box-sizing: border-box;
+      border-radius: 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      &:hover {
+        color: @white;
+        box-shadow: -5px 5px 20px rgba(255, 130, 25, 0.4);
+        background: @orange;
+      }
+
+      &:active {
+        color: @white;
+        background: linear-gradient(0deg, rgba(0, 0, 0, 0.02), rgba(0, 0, 0, 0.02)), @orange;
+        box-shadow: none;
+      }
+    }
   }
 }

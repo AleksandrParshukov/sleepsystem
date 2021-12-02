@@ -6,6 +6,7 @@ const location_swiper = new Swiper ('.location__swiper', {
   direction: 'horizontal',
   loop: true,
   effect: 'fade',
+  allowTouchMove: false,
   fadeEffect: {
       crossFade: true
     },
