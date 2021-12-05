@@ -2,10 +2,6 @@
   &__row {
     max-width: 871px;
     margin: 37px auto 105px;
-
-    >p:first-child {
-      margin-bottom: 60px;
-    }
   }
 
   &__title {
@@ -30,7 +26,7 @@
   &__image {
     width: 663px;
     height: auto;
-    margin: 60px auto 80px;
+    margin: 60px auto 0;
     border-radius: 8px;
   }
 
@@ -43,7 +39,7 @@
   }
 
   &__list {
-    margin: 40px 0 80px 35px;
+    margin: 40px 0 0 35px;
   }
 
   &__item {
@@ -104,10 +100,6 @@
     &__row {
       max-width: 100%;
       margin: 16px auto 86px;
-  
-      >p:first-child {
-        margin-bottom: 45px;
-      }
     }
   
     &__title {
@@ -129,9 +121,11 @@
     }
   
     &__image {
-      width: 100%;
-      margin: 25px auto 50px;
+      width: 100vw;
+      max-width: none;
+      margin: 25px 0 0 50%;
       border-radius: 0;
+      transform: translateX(-50%);
     }
   
     &__text {
@@ -141,12 +135,16 @@
     }
   
     &__list {
-      margin: 25px 0 45px 46px;
+      width: min-content;
+      max-width: 100%;
+      margin: 25px 0 0 46px;
     }
   
     &__item {
       font-size: 16px;
       line-height: 20px;
+      width: max-content;
+      max-width: 90%;
     }
   
     &__back_link {

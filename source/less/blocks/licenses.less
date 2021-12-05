@@ -1,6 +1,6 @@
 .licenses {
   &__row {
-    margin: 0 auto 90px;
+    margin: 0 auto;
 
     &:nth-child(2) {
       margin: 0 auto;
@@ -129,7 +129,7 @@
 @media (max-width: 576px) {
   .licenses {
     &__row {
-      margin: 0 auto 30px;
+      margin: 0 auto;
   
       &:nth-child(2) {
         margin: 0 auto;
@@ -139,7 +139,7 @@
         font-size: 16px;
         line-height: 20px;
         padding: 0 23px;
-        margin: 0 0 26px;
+        margin: 0;
       }
     }
   
@@ -163,11 +163,15 @@
   
     &__item {
       width: min-content;
-      margin: 0 0 25px;
+      margin: 25px 0 0;
   
       >p {
         font-size: 12px;
         line-height: 15px;
+      }
+
+      &:last-child {
+        margin: 25px 0 0;
       }
     }
   
@@ -179,7 +183,7 @@
   
     &__dropdown_wrap {
       padding: 0 23px;
-      margin: 0 auto 25px;
+      margin: 0 auto;
       position: relative;
       flex-shrink: 0;
   
