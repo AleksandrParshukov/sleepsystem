@@ -3884,15 +3884,15 @@ input[type=number]::-webkit-outer-spin-button {
   margin: 55px 0 0;
   justify-content: space-between;
 }
-.about > p:not(.about__stat_number) {
+.about__stat {
+  flex-direction: column;
+  align-items: flex-start;
+}
+.about__stat > p:not(.about__stat_number) {
   font-weight: normal;
   font-size: 18px;
   line-height: 22px;
   letter-spacing: 0.01em;
-}
-.about__stat {
-  flex-direction: column;
-  align-items: flex-start;
 }
 .about__stat:nth-child(1) p:last-child {
   max-width: 207px;
