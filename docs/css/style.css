@@ -3873,7 +3873,7 @@ input[type=number]::-webkit-outer-spin-button {
   left: 20px;
   z-index: 1;
 }
-.about__row > p:not(.about__stat_number) {
+.about__row > p {
   font-weight: normal;
   font-size: 18px;
   line-height: 22px;
@@ -3883,6 +3883,12 @@ input[type=number]::-webkit-outer-spin-button {
   width: 100%;
   margin: 55px 0 0;
   justify-content: space-between;
+}
+.about > p:not(.about__stat_number) {
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 22px;
+  letter-spacing: 0.01em;
 }
 .about__stat {
   flex-direction: column;
