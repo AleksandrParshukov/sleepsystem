@@ -3,6 +3,10 @@
 *::after {
   box-sizing: border-box;
 }
+*:active,
+*:focus {
+  outline: none;
+}
 html {
   min-height: 100%;
   overflow-x: hidden;
@@ -2970,6 +2974,7 @@ input[type=number]::-webkit-outer-spin-button {
   }
   .contacts__map {
     margin: 0 0 35px;
+    max-height: 61.41vw;
   }
 }
 .installment {
@@ -3054,6 +3059,9 @@ input[type=number]::-webkit-outer-spin-button {
 }
 .installment__banks_item:first-child .installment__bank_img {
   margin: 10px 0;
+}
+.installment__banks_item:last-child {
+  margin-bottom: 0;
 }
 .installment__banks_item > p {
   font-weight: normal;
@@ -4455,11 +4463,18 @@ input[type=number]::-webkit-outer-spin-button {
   margin: 27px 0;
 }
 .brands__logos {
-  display: grid;
-  grid-template-columns: repeat(3, min-content);
-  align-items: center;
-  gap: 35px 75px;
+  width: 80%;
   margin-bottom: 60px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  align-items: center;
+  justify-items: center;
+  gap: 35px 75px;
+}
+.brands__logo_img {
+  max-width: 215px;
+  max-height: 117px;
+  margin: 0 auto;
 }
 @media (max-width: 576px) {
   .brands__title {
@@ -4522,7 +4537,7 @@ input[type=number]::-webkit-outer-spin-button {
   content: "";
   width: 235px;
   height: 108px;
-  background: url("../img/logo/brand_1.png") no-repeat center;
+  background: url("../img/logo/tempur_logo.png") no-repeat center;
   background-size: contain;
   display: block;
   position: absolute;
@@ -4659,9 +4674,12 @@ input[type=number]::-webkit-outer-spin-button {
     width: 418px;
     max-width: none;
     height: 423px;
-    margin: -33px 0 -44px 50%;
+    margin: 0 0 0 50%;
     position: static;
     transform: translateX(-50%);
+  }
+  .brand_page__planet + p {
+    margin-top: 0;
   }
   .brand_page__history p {
     padding: 0 23px 0 0;
@@ -5806,8 +5824,6 @@ input[type=number]::-webkit-outer-spin-button {
     margin: 16px auto 86px;
   }
   .article_page__title {
-    text-align: left;
-    min-width: 372px;
     margin: 0 auto 5px;
   }
   .article_page__date {

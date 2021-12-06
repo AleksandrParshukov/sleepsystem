@@ -19,11 +19,19 @@
   }
 
   &__logos {
-    display: grid;
-    grid-template-columns: repeat(3, min-content);
-    align-items: center;
-    gap: 35px 75px;
+    width: 80%;
     margin-bottom: 60px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+    justify-items: center;
+    gap: 35px 75px;
+  }
+
+  &__logo_img {
+    max-width: 215px;
+    max-height: 117px;
+    margin: 0 auto;
   }
 }
 
