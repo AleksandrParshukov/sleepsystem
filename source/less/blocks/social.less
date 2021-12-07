@@ -10,7 +10,6 @@
     padding: 8px 3px;
     margin: 0 0 27px;
     border: 1px solid @orange;
-    box-sizing: border-box;
     border-radius: 5px;
     display: block;
 
@@ -129,7 +128,8 @@
     &__button {
       font-size: 10px;
       line-height: 12px;
-      width: 134px;
+      width: max-content;
+      min-width: none;
       padding: 10px 8px;
       margin: 17px 0 0;
       border-radius: 18px;
