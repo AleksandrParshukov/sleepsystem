@@ -7708,7 +7708,6 @@ input[type=number]::-webkit-outer-spin-button {
     font-size: 14px;
     line-height: 17px;
     width: 38px;
-    height: 1.125em;
     max-height: 98%;
   }
   .cart__price {
