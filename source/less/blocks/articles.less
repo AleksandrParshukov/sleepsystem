@@ -3,12 +3,12 @@
     border-bottom: 1px solid @border-color;
 
     &:last-child {
-      margin-bottom: 40px;
+      border-bottom: none;
     }
   }
 
   &__title {
-    margin: 0 0 40px;
+    margin: 0;
   }
 
   &__caption {
@@ -81,13 +81,15 @@
       padding: 0 33px;
       position: relative;
 
-      &:last-child {
-        margin-bottom: 34px;
+      &:nth-child(3) {
+        .articles__caption {
+          margin-top: 0;
+        }
       }
     }
-  
+
     &__title {
-      margin: 0 0 17px;
+      margin-bottom: 20px;
     }
   
     &__caption {
