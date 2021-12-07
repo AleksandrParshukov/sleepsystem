@@ -55,6 +55,7 @@ ul {
   margin: 0;
 }
 button {
+  font-weight: normal;
   padding: 0;
   background: none;
   border: none;
